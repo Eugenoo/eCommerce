@@ -60,10 +60,12 @@
             </div>
             <form>
               <div>
-                <div class="relative mt-2 rounded-md shadow-sm">
-                  <div class="block w-full rounded-md border-0 py-5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"> </div>
-                </div>
-                <input type="radio" value="XD">
+                <input name="delivery" type="radio" value="XD" id="inpost_paczkomat">
+                <label for="inpost_paczkomat">inPost paczkomat</label>
+              </div>
+              <div>
+                <input name="delivery" type="radio" value="XD" id="inpost_kurier">
+                <label for="inpost_kurier">inPost kurier</label>
               </div>
             </form>
           </div>
