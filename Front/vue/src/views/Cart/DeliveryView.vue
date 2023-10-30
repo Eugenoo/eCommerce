@@ -1,5 +1,4 @@
 <template>
-  XDD
   <delivery-component></delivery-component>
 </template>
 
