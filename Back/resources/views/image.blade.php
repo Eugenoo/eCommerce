@@ -4,10 +4,15 @@
 <title>Page Title</title>
 </head>
 <body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-<img src="storage">
+<form method="POST" action="/login">
+    @csrf
+    <label>Login</label>
+    <input type="text" name="email">
+    <br>
+    <label>Password</label>
+    <input type="password" name="password">
+    <button type="submit">Login</button>
+</form>
 
 </body>
 </html>

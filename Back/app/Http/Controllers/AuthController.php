@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+    public function index(){
+        return view('image');
+    }
+
     public function register(Request $request)
     {
         $data = $request->validate([
@@ -60,7 +65,7 @@ class AuthController extends Controller
     public function logout()
     {
         auth()->user()->tokens()->delete();
-        
+
         return [
             'message' => 'Logged Out!'
         ];
@@ -69,5 +74,47 @@ class AuthController extends Controller
     public function resetPassword()
     {
         echo 'Reset';
+    }
+
+    public function localLogin(Request $request){
+        $data = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string'
+        ]);
+
+        $user = User::where('email', $data['email'])->first();
+
+        if(!$user || !Hash::check($data['password'], $user->password))
+        {
+            //return response('Wrong Credentials', 401);
+            return redirect()->back();
+        }
+
+        $token = $user->createToken('authToken')->plainTextToken;
+
+        $response = [
+            'user' => $user,
+            'token' => $token
+        ];
+
+        return redirect()->route('panel', $response);
+
+        //return response($response, 201);
+    }
+
+    public function admin(){
+
+        $user = [
+            'name' => 'Debil'
+        ];
+
+        $products = Product::all();
+
+        $data = [
+            'products' => $products,
+            'user' => $user
+        ];
+
+        return view('admin', ['test' => $data]);
     }
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +17,11 @@ use App\Http\Controllers\ImageController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', [AuthController::class, 'index']);
+Route::post('/login', [AuthController::class, 'localLogin']);
+
+Route::get('/admin', [AuthController::class, 'admin'])->name('panel');
 
 Route::get('/photo/{product}', [ImageController::class, 'getPhoto']);
 
