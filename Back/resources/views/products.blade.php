@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Sic Parvis Magna</title>
+        <title>Laravel</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -63,7 +63,7 @@
                     </a>
                  </li>
                  <li>
-                    <a href="admin/products" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                        <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                           <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
                        </svg>
@@ -117,82 +117,53 @@
                     </p>
                  </div>
               </div>
+              <div class="h-32">
+              </div>
+
               <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-                 <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                    </svg>
-                 </p>
-              </div>
-              <div class="grid grid-cols-2 gap-4 mb-4">
-                 <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                       <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                       </svg>
-                    </p>
-                 </div>
-                 <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                       <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                       </svg>
-                    </p>
-                 </div>
-                 <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                       <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                       </svg>
-                    </p>
-                 </div>
-                 <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                       <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                       </svg>
-                    </p>
-                 </div>
-              </div>
-              <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-                 <p class="text-2xl text-gray-400 dark:text-gray-500">
-                    <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                    </svg>
-                 </p>
-              </div>
-              <div class="grid grid-cols-2 gap-4">
-                 <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                       <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                       </svg>
-                    </p>
-                 </div>
-                 <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                       <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                       </svg>
-                    </p>
-                 </div>
-                 <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                       <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                       </svg>
-                    </p>
-                 </div>
-                 <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-                    <p class="text-2xl text-gray-400 dark:text-gray-500">
-                       <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-                       </svg>
-                    </p>
-                 </div>
+                 <table>
+                             <tr>
+                                 <th>id</th>
+                                 <th>name</th>
+                                 <th>description</th>
+                                 <th>price</th>
+                                 <th>age</th>
+                                 <th>stock</th>
+                                 <th>bestseller</th>
+                                 <th>sale</th>
+                                 <th>created_at</th>
+                                 <th>updated_at</th>
+                                 <th>action</th>
+                             </tr>
+                             <?php $i=0; ?>
+                             @foreach($test['products'] as $product)
+                             <?php $i++ ?>
+                             <?php if($i%2 == 0) : ?>
+                                 <tr class="bg-white hover:bg-gray-200" >
+                             <?php elseif($i%2 == 1) : ?>
+                                 <tr class="bg-gray-100 hover:bg-gray-200" >
+                             <?php endif; ?>
+                                 <td>{{ $product['id'] }}</td>
+                                 <td>{{ $product['name'] }}</td>
+                                 <td>{{ $product['description'] }}</td>
+                                 <td>{{ $product['price'] }}</td>
+                                 <td>{{ $product['age'] }}</td>
+                                 <td>{{ $product['stock'] }}</td>
+                                 <td>{{ $product['bestseller'] }}</td>
+                                 <td>{{ $product['sale'] }}</td>
+                                 <td>{{ $product['created_at'] }}</td>
+                                 <td>{{ $product['updated_at'] }}</td>
+                                 <td>
+                                     <button class="bg-blue-400">edit</button>
+                                     <button>delete</button>
+                                 </td>
+                             </tr>
+                             @endforeach
+                             </table>
               </div>
            </div>
         </div>
 
     </body>
 </html>
+

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,6 @@ Route::get('/login', [AuthController::class, 'index']);
 Route::post('/login', [AuthController::class, 'localLogin']);
 
 Route::get('/admin', [AuthController::class, 'admin'])->name('panel');
-
+Route::get('/admin/products', [ProductController::class, 'localIndex'])->name('products');
 Route::get('/photo/{product}', [ImageController::class, 'getPhoto']);
 

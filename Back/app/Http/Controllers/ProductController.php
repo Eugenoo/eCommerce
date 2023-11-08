@@ -90,4 +90,19 @@ class ProductController extends Controller
         $product->remove();
         return $product;
     }
+
+    public function localIndex() {
+        $user = [
+            'name' => 'Debil'
+        ];
+
+        $products = Product::all();
+
+        $data = [
+            'products' => $products,
+            'user' => $user
+        ];
+
+        return view('products', ['test' => $data]);
+    }
 }
