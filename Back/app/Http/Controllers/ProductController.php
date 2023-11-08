@@ -105,4 +105,9 @@ class ProductController extends Controller
 
         return view('products', ['test' => $data]);
     }
+
+    public function localAddProduct()
+    {
+        return view('addProduct');
+    }
 }

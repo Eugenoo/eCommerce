@@ -24,5 +24,6 @@ Route::post('/login', [AuthController::class, 'localLogin']);
 
 Route::get('/admin', [AuthController::class, 'admin'])->name('panel');
 Route::get('/admin/products', [ProductController::class, 'localIndex'])->name('products');
+Route::get('/admin/products/add', [ProductController::class, 'localAddProduct'])->name("addProduct");
 Route::get('/photo/{product}', [ImageController::class, 'getPhoto']);
 
