@@ -1,24 +1,15 @@
 <template>
-  <div class="bg-red-200 px-16 py-8">
-    <div class="flex justify-center">
-      <input
-          type="text"
-          class="rounded-3xl p-3 w-full"
-          placeholder="new Name"
-          v-model="nameInput"
-      >
+    <div class="grid grid-cols-2 gap-8 pt-20 p-8">
+      <div  v-for="category in categoriesStore.category" >
+      <div class="bg-blue-400">
+        <div class="h-20">
+          {{category.id}}
 
-      <button @click="handleSubmit" class="bg-green-200 rounded-3xl hover:bg-blue-300 p-5">XD</button>
+          {{category.name}}
+        </div>
+      </div>
+      </div>
     </div>
-  </div>
-  <div v-for="category in categoriesStore.category">
-    <div class="h-20">
-      {{category.id}}
-
-      {{category.name}}
-    </div>
-  </div>
-
   <footer>
     <div class="bg-green-200 h-32">
       Footer
@@ -29,6 +20,7 @@
 <script setup>
 import {useCategoryStore} from "../stores/Category/CategoryStore.js";
 import {onMounted, ref} from "vue";
+import NavbarComponent from "./Navbar/NavbarComponent.vue";
 
 const categoriesStore = useCategoryStore();
 

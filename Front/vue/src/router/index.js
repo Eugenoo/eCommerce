@@ -1,7 +1,8 @@
 import Home from '../views/HomeView.vue'
 import About from '../views/AboutView.vue'
 import {createRouter, createWebHistory} from "vue-router";
-import Category from "../views/CategoryView.vue"
+import Category from "../views/CategoryView.vue";
+import Categories from "../views/CategoriesView.vue";
 import Product from "../views/ProductView.vue";
 import Cart from "../views/Cart/CartView.vue";
 import Checkout from "../views/CheckoutView.vue";
@@ -17,6 +18,7 @@ const routes = [
     { path: '/', name: 'Home' , component: Home },
     { path: '/about', component: About },
     { path: '/category', name: 'Category', component: Category},
+    { path: '/category/:name', name: 'ProductCategory', component: Categories, props: true},
     { path: '/product/:id',
       name: 'product',
       component: SingleProductView,

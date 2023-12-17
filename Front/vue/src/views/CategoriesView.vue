@@ -1,4 +1,5 @@
 <template>
+  <navbar-component></navbar-component>
   <div class="bg-white dark:bg-gray-900 px-16 pb-8 pt-10 mt-10">
     <div class="flex justify-center">
       <input type="text" class="rounded-3xl p-3 w-full">
@@ -24,7 +25,7 @@
     <!--Product List -->
     <div class="grid grid-cols-2 p-5 gap-5">
       <!-- Products Loading -->
-<!--      <div class="loading" v-if="//productStore.loading">Loading Products...</div>-->
+      <!--      <div class="loading" v-if="//productStore.loading">Loading Products...</div>-->
       <div v-for="product in productStore.products">
         <div class="rounded-xl h-full">
           <router-link
@@ -62,6 +63,7 @@ import {ref, onMounted, computed} from "vue";
 import {useProductStore} from "../stores/Product/ProductStore.js";
 import {useCategoryStore} from "../stores/Category/CategoryStore.js";
 import {useCartStore} from "../stores/Cart/CartStore.js";
+import NavbarComponent from "../components/Navbar/NavbarComponent.vue";
 
 
 const store = useCategoryStore();
@@ -73,6 +75,7 @@ const cartStore = useCartStore();
 onMounted(() => {
   store.fetchCategories();
   productStore.fetchProducts();
+  //filter products
 })
 
 
