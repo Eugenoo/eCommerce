@@ -25,9 +25,26 @@ export let useProductStore = defineStore('products', () => {
             })
     }
 
+    const createProduct = (product) => {
+        var token = sessionStorage.getItem('TOKEN');
+        console.log(token);
+        const data = axios.post('https://filiptuliszkiewicz.com/api/product/add', product,
+            {
+                headers: {
+                    "Authorization":"Bearer " + token
+                }
+            })
+            .then((response) => {
+                console.log(response);
+            }).catch((error) => {
+                console.log(error);
+            })
+    }
+
     return {
         products,
         fetchProducts,
         getSingleProduct,
+        createProduct,
     }
 });

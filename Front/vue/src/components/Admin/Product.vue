@@ -88,8 +88,10 @@ const product = ref({
 
 function addProduct()
 {
+    console.log(store);
     product.value.photo = base64String;
     store.createProduct(product.value);
+    store.fetchProducts();
 }
 
 let base64String = "";
@@ -116,11 +118,8 @@ onMounted(() => {
 })
 
 function deleteProduct(product){
-    console.log('1')
     store.deleteProduct(product);
-    console.log('2')
     store.fetchProducts();
-    console.log('3');
 }
 
 </script>
