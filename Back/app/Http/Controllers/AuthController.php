@@ -97,9 +97,21 @@ class AuthController extends Controller
             'token' => $token
         ];
 
+        $request->session()->put('token', $token);
+
         return redirect()->route('panel', $response);
 
         //return response($response, 201);
+    }
+
+    public function localLogout(){
+        $auth = auth();
+        dd($auth);
+        auth()->user()->tokens()->delete();
+
+        return [
+            'message' => 'Logged Out!'
+        ];
     }
 
     public function admin(){

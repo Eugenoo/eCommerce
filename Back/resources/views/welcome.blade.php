@@ -29,6 +29,7 @@
                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id tortor massa. Quisque fermentum nibh non lacus suscipit, et laoreet elit sollicitudin.
                            </div>
                         </section>
+                        <a href="/login">Login</a>
                     </div>
                 </div>
             </div>

@@ -21,9 +21,11 @@ Route::get('/', function () {
 
 Route::get('/login', [AuthController::class, 'index']);
 Route::post('/login', [AuthController::class, 'localLogin']);
+Route::get('/logout', [AuthController::class, 'localLogout']);
 
 Route::get('/admin', [AuthController::class, 'admin'])->name('panel');
 Route::get('/admin/products', [ProductController::class, 'localIndex'])->name('products');
+Route::get('/admin/users', [ProductController::class, 'localUsers'])->name('users');
 Route::get('/admin/products/add', [ProductController::class, 'localAddProduct'])->name("addProduct");
 Route::get('/photo/{product}', [ImageController::class, 'getPhoto']);
 

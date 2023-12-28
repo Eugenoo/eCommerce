@@ -105,6 +105,17 @@ class ProductController extends Controller
 
         return view('products', ['test' => $data]);
     }
+    public function localUsers() {
+        $user = [
+            'name' => 'Debil'
+        ];
+
+        $data = [
+            'user' => $user
+        ];
+
+        return view('users', ['test' => $data]);
+    }
 
     public function localAddProduct()
     {
