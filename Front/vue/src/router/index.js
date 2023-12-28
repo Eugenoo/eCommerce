@@ -10,9 +10,11 @@ import Login from "../views/LoginView.vue";
 import {useUserStore} from "../stores/User/UserStore.js";
 import AdminView from "../views/Admin/AdminView.vue";
 import AdminProductView  from "../views/Admin/ProductView.vue";
+import AdminOrdersView from "../views/Admin/AdminOrdersView.vue";
 import SingleProductView from "../views/SingleProduct.vue";
 import Delivery from "../components/Cart/DeliveryComponent.vue";
 import CartSummary from "../components/Cart/CartSummary.vue";
+
 
 const routes = [
     { path: '/', name: 'Home' , component: Home },
@@ -73,6 +75,11 @@ const routes = [
                 path: '/admin/products',
                 name: 'admin.products',
                 component: AdminProductView
+            },
+            {
+                path: '/admin/orders',
+                name: 'admin.orders',
+                component: AdminOrdersView
             }
         ]
     }
