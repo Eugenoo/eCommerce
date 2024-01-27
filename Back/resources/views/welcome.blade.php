@@ -9,8 +9,8 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="style" href="/"/>
         <!-- Styles -->
 
         @vite('resources/css/app.css')
@@ -20,7 +20,7 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex justify-center items-center min-h-screen bg-center bg-white selection:bg-red-500 selection:text-white">
+        <div class="relative flex justify-center items-center min-h-screen bg-center selection:bg-red-500 selection:text-white">
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">
                     <div>
@@ -29,6 +29,12 @@
                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id tortor massa. Quisque fermentum nibh non lacus suscipit, et laoreet elit sollicitudin.
                            </div>
                         </section>
+                           <div class="animated_card">
+                                <span class="fa-regular fa-paper-plane"></span>
+                           </div>
+                           <div class="animated_card">
+                                <span class="fa-regular fa-paper-plane"></span>
+                           </div>
                         <a href="/login">Login</a>
                     </div>
                 </div>
