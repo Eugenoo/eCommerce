@@ -4,6 +4,7 @@ import axios from "axios";
 
 export let useProductStore = defineStore('products', () => {
     const products = ref({})
+    const product = ref({})
 
     const fetchProducts = () => {
         const data = axios.get('https://filiptuliszkiewicz.com/api/home')
@@ -17,9 +18,7 @@ export let useProductStore = defineStore('products', () => {
     const getSingleProduct = (value) => {
         const data = axios.get('https://filiptuliszkiewicz.com/api/product/'+value.id)
             .then((response) => {
-                console.log(response);
-
-                products.value = response.data;
+                product.value = response.data;
             }).catch((error) => {
                 console.log(error);
             })
@@ -27,7 +26,6 @@ export let useProductStore = defineStore('products', () => {
 
     const createProduct = (product) => {
         var token = sessionStorage.getItem('TOKEN');
-        console.log(token);
         const data = axios.post('https://filiptuliszkiewicz.com/api/product/add', product,
             {
                 headers: {
@@ -43,6 +41,7 @@ export let useProductStore = defineStore('products', () => {
 
     return {
         products,
+        product,
         fetchProducts,
         getSingleProduct,
         createProduct,

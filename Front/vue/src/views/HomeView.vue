@@ -5,9 +5,8 @@
 
 <script setup>
 import Home from "../components/Home.vue";
-import NavbarComponent from "../components/Navbar/NavbarComponent.vue"
+import NavbarComponent from "../components/Navbar/NavbarComponent.vue";
 </script>
-
 <style scoped>
 
 </style>

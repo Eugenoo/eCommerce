@@ -1,67 +1,45 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2">
-    <div id="form">
-      <div class="bg-gray-100 rounded-3xl m-5 p-5 justify-items-center">
-        <form method="post" @submit.prevent="addProduct">
-          <div>
-            <label>Name</label>
-            <br>
-            <input class="rounded-3xl" v-model="product.name" type="text">
-          </div>
-          <div>
-            <label>Description</label>
-            <br>
-            <input class="rounded-3xl" v-model="product.description" type="text">
-          </div>
-          <div>
-            <label>Price</label>
-            <br>
-            <input class="rounded-3xl" v-model="product.price" type="text">
-          </div>
-          <div>
-            <label>Age</label>
-            <br>
-            <input class="rounded-3xl" v-model="product.age" type="text">
-          </div>
-          <div>
-            <label>Stock</label>
-            <br>
-            <input class="rounded-3xl" v-model="product.stock" type="text">
-          </div>
-          <div>
-            <label>Category_id</label>
-            <br>
-            <input class="rounded-3xl" v-model="product.category_id" type="text">
-          </div>
-          <div>
-            <label>Photo</label>
-            <br>
-            <input type="file"  v-on:change="imageUploaded()">
-          </div>
-          <button class="rounded-3xl bg-cyan-200 m-5 p-5 justify-center" type="submit">Dodaj</button>
-        </form>
-        <button>
-          Display String
+  <div class="grid grid-cols-1 bg-gray-200 xl:px-24">
+    <div class="grid grid-cols-4">
+      <div class="bg-gray-100 rounded-3xl m-5 p-4 justify-items-center col-span-3">
+        <input class="bg-white rounded-xl p-2">
+        <button> Filter</button>
+      </div>
+      <div class="bg-gray-100 rounded-3xl m-5 p-4 justify-items-center">
+        <button class="bg-white rounded-xl p-2 w-full outline">
+          + ADD PRODUCT
         </button>
+      </div>
+    </div>
+    <div>
+      <div class="grid grid-cols-5 mx-10">
+      <div>Photo</div>
+      <div>Name</div>
+      <div>Price</div>
+      <div></div>
+      <div>Action</div>
       </div>
     </div>
     <div class="p-5" id="table">
         <div v-for="product in products">
-          <div class="grid grid-cols-5 m-2">
-            <div class="bg-gray-100">
-              {{product.id}}
-            </div>
-            <div class="bg-gray-100">
-              {{product.name}}
-            </div>
-            <div class="bg-gray-100">
-              {{product.price}}
-            </div>
-            <div class="bg-gray-100">
-              Edit
-            </div>
-            <div class="bg-gray-100">
-              <button v-on:click="deleteProduct(product)">Delete</button>
+          <div class="bg-gray-100 rounded-xl h-24">
+            <div class="grid grid-cols-5 m-2">
+              <div>
+                {{product.id}}
+              </div>
+              <div>
+                {{product.name}}
+              </div>
+              <div>
+                {{product.price}}
+              </div>
+              <div class="bg-gray-100">
+                Edit
+              </div>
+              <div class="grid-cols-2 justify-items-center">
+                <button v-on:click="deleteProduct(product)">Edit</button>
+                <button v-on:click="deleteProduct(product)">Delete</button>
+              </div>
             </div>
           </div>
         </div>
@@ -85,14 +63,6 @@ const product = ref({
   'stock':'',
   'photo':'',
 })
-
-function addProduct()
-{
-    console.log(store);
-    product.value.photo = base64String;
-    store.createProduct(product.value);
-    store.fetchProducts();
-}
 
 let base64String = "";
 

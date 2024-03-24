@@ -6,13 +6,13 @@
   <div class="rounded-xl my-5">
     <div class="grid justify-items-center p-2">
       <div>
-        <img class="p-20 m-5" :src="store.products.photosrc">
+        <img class="p-20 m-5" :src="store.product.photosrc">
       </div>
-      <p class="font-semibold p-2">{{ store.products.name }}</p>
-      <p> {{store.products.description}}</p>
-      <p>Wiek: {{ store.products.age }} +</p>
+      <p class="font-semibold p-2">{{ store.product.name }}</p>
+      <p> {{store.product.description}}</p>
+      <p>Wiek: {{ store.product.age }} +</p>
 
-      <p class="text-3xl">{{store.products.price}}</p>
+      <p class="text-3xl">{{store.product.price}}</p>
     </div>
 
     <div class="flex justify-center">
@@ -23,7 +23,7 @@
 
 <script setup>
 import NavbarComponent from "./Navbar/NavbarComponent.vue";
-import {onMounted, reactive} from "vue";
+import {onMounted} from "vue";
 import { useRoute } from "vue-router";
 import {useProductStore} from "../stores/Product/ProductStore.js";
 

@@ -1,11 +1,6 @@
 <template>
-  <div class="bg-white dark:bg-gray-900 px-16 pb-8 pt-10 mt-10">
-    <div class="flex justify-center">
-      <input type="text" class="rounded-3xl p-3 w-full">
-    </div>
-  </div>
   <!-- Category RollBar -->
-  <div class="h-20">
+  <div class="mt-16 h-20">
     <div class="flex  snap-x snap-mandatory h-20 overflow-scroll overflow-y-hidden no-scrollbar">
 
       <div v-for="category in store.category" class="snap-start flex-shrink-0 p-3 m-3 flex items-center justify-center text-xl text-black font-bold rounded-3xl">
@@ -57,12 +52,11 @@
 </template>
 
 <script setup>
-import {ref, onMounted, computed} from "vue";
+import {onMounted} from "vue";
 
 import {useProductStore} from "../stores/Product/ProductStore.js";
 import {useCategoryStore} from "../stores/Category/CategoryStore.js";
 import {useCartStore} from "../stores/Cart/CartStore.js";
-
 
 const store = useCategoryStore();
 
@@ -74,7 +68,6 @@ onMounted(() => {
   store.fetchCategories();
   productStore.fetchProducts();
 })
-
 
 function addToCart(product){
   cartStore.addToCart(product);

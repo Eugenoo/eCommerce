@@ -3,7 +3,6 @@ import About from '../views/AboutView.vue'
 import {createRouter, createWebHistory} from "vue-router";
 import Category from "../views/CategoryView.vue";
 import Categories from "../views/CategoriesView.vue";
-import Product from "../views/ProductView.vue";
 import Cart from "../views/Cart/CartView.vue";
 import Checkout from "../views/CheckoutView.vue";
 import Login from "../views/LoginView.vue";
