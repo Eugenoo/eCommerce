@@ -92,15 +92,16 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
     const store = useUserStore();
 
+    const test = localStorage.getItem('token');
+
     if(to.meta.requiresAuth && !store.$state.isLoggedIn){
         next('login');
     }
     else if(to.meta.requiresGuest && store.$state.isLoggedIn){
-        console.log('2');
         next();
     }
     else {
-        console.log('x');
+        console.log('siema');
         next();
     }
 })

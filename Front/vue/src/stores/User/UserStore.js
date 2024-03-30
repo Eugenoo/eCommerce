@@ -24,12 +24,16 @@ export let useUserStore = defineStore('user', {
                     this.isLoggedIn = true
                     sessionStorage.setItem('TOKEN', response.data.token)
                     router.push('/admin')
-                    console.log('x')
+
+                    localStorage.setItem('localToken', response.data.token)
                 })
                 .catch((error) => {
                     this.loginError = error.response.data
                     return error;
                 })
+        },
+        logout(){
+            axios.post()
         }
     }
 });

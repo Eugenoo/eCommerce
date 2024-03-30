@@ -7,7 +7,7 @@
       </div>
       <div class="bg-gray-100 rounded-3xl m-5 p-4 justify-items-center">
         <button class="bg-white rounded-xl p-2 w-full outline">
-          + ADD PRODUCT
+          +
         </button>
       </div>
     </div>
