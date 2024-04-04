@@ -54,6 +54,7 @@ function login()
 {
   store.login(user.value);
   error.value.whole = store.loginError;
+
 }
 
 function validateEmail(email) {

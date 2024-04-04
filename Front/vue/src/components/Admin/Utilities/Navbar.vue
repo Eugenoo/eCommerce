@@ -23,7 +23,7 @@
             <router-link :to="{name: 'admin.orders'}" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Orders</router-link>
           </li>
           <li>
-            <router-link :to="{ name:'Login' }" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Logout</router-link>
+            <button @click="logout" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Logout</button>
           </li>
         </ul>
       </div>
@@ -32,6 +32,12 @@
 </template>
 
 <script setup>
+
+import {useUserStore} from "../../../stores/User/UserStore.js";
+import router from "../../../router/index.js";
+
+const store = useUserStore();
+
 function click() {
   const target = document.getElementById('navbar-default');
   if(target.classList.contains('hidden')) {
@@ -39,6 +45,13 @@ function click() {
   } else {
     target.classList.add('hidden')
   }
+}
+
+function logout() {
+  console.log('logoutFunc');
+  const token = sessionStorage.getItem('TOKEN');
+  store.logout(token);
+  //router.push({name : 'Home'});
 }
 </script>
 <style scoped>

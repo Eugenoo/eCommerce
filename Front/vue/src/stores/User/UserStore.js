@@ -22,18 +22,31 @@ export let useUserStore = defineStore('user', {
                     this.token = response.data.token
                     this.loginError = null
                     this.isLoggedIn = true
+                    sessionStorage.setItem('isLoggedIn', true)
                     sessionStorage.setItem('TOKEN', response.data.token)
                     router.push('/admin')
-
-                    localStorage.setItem('localToken', response.data.token)
                 })
                 .catch((error) => {
                     this.loginError = error.response.data
                     return error;
                 })
         },
-        logout(){
-            axios.post()
+        logout(token){
+            axios.post('https://filiptuliszkiewicz.com/api/logout', token,
+                {
+                    headers: {
+                        "Authorization" : "Bearer " + token
+                    }
+                })
+                .then((response) => {
+                    console.log(response);
+                    sessionStorage.setItem('isLoggedIn', false)
+                    sessionStorage.removeItem('TOKEN')
+                    router.push('/login');
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
         }
     }
 });

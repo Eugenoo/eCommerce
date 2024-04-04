@@ -58,6 +58,13 @@ const routes = [
         }
     },
     {
+        path: '/logout',
+        name: 'Logout',
+        meta: {
+            requiresGuest: true
+        }
+    },
+    {
         path: '/admin',
         name: 'admin',
         redirect: '/admin/dashboard',
@@ -90,18 +97,23 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    const store = useUserStore();
 
-    const test = localStorage.getItem('token');
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
 
-    if(to.meta.requiresAuth && !store.$state.isLoggedIn){
-        next('login');
+    if(to.meta.requiresAuth && isLoggedIn === "false" ){
+        next('/login');
     }
-    else if(to.meta.requiresGuest && store.$state.isLoggedIn){
+    else if(to.meta.requiresAuth && isLoggedIn === "true"){
         next();
     }
+    else if(!isLoggedIn){
+        sessionStorage.setItem('isLoggedIn', false);
+        next();
+    }
+    else if(to.meta.requiresGuest && isLoggedIn === "true"){
+        next('admin');
+    }
     else {
-        console.log('siema');
         next();
     }
 })
